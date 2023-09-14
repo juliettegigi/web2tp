@@ -9,7 +9,7 @@ const pRtaSignUp=document.getElementById("respuestaSignUp")
 
 var url = (window.location.hostname.includes('localhost'))
     ? 'http://localhost:8080'
-    : 'https://web2tp.onrender.com';// TODO cambiar esto
+    : 'https://web2tp.onrender.com';
 
 btnLogin.addEventListener('click', e => {
     const usuario = document.getElementById('usuario').value;

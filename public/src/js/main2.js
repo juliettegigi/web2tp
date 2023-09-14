@@ -12,7 +12,7 @@ export const validarJWT=async()=>{
     const token = localStorage.getItem('token');
 
     if(!token || token.length<=10){  //si el token tiene menos de 10 letras
-        window.location='index.html';//redirecciono
+        window.location='/login';//redirecciono
     }
 
 
@@ -29,7 +29,7 @@ export const validarJWT=async()=>{
         document.title=usuario;}
         else throw new Error(respuesta.msg)  
     } catch (error) { 
-        window.location='index.html';//redirecciono
+        window.location="/login";//redirecciono
     } 
 }
 
