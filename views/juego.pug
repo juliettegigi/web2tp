@@ -1,0 +1,54 @@
+doctype html
+html(lang="en")
+head
+  script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous")
+
+  link(
+    rel="stylesheet" 
+    href="./src/css/juego.css"
+    )
+  link(
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+    )
+  meta(charset="UTF-8")
+  meta(
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0"
+    )
+  title=Juego
+
+body(class="container-fluid d-flex justify-content-center flex-column")
+  .row.d-flex.justify-content-center
+    .divFondo.col-10.d-flex.justify-content-center.align-items-center
+ 
+      #contenedorJuego.card.text-center
+        .card-header
+          ul(class="nav nav-pills mb-3" id="pills-tab" role="tablist")
+            li(class="nav-item" role="presentation")
+              button(class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true") Juego
+            li(class="nav-item" role="presentation")
+              button(class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false") Ranking
+            li(class="nav-item" role="presentation")
+              button(class="nav-link" id="reiniciar" type="button" role="tab") Reset
+            li(class="nav-item" role="presentation")
+              button(class="nav-link" id="logOut" type="button" role="tab") Log out
+          
+          #pills-tabContent.tab-content
+            #pills-home.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="pills-home-tab")
+              #juego.d-flex.justify-content-center.align-items-center
+            #pills-profile.tab-pane.fade(role="tabpanel" aria-labelledby="pills-profile-tab")
+              .table-responsive
+                table(class="table")
+                  caption Lista de usuarios
+                  thead
+                    tr
+                      th(scope="col") #
+                      th(scope="col") NickName
+                      th(scope="col") Respuestas correctas
+                      th(scope="col") Tiempo(milisegundos)
+                  tbody(id="filasRank")
+            #pills-contact.tab-pane.fade(role="tabpanel" aria-labelledby="pills-contact-tab") ...
+      script(type="module" src="./src/js/juego.js")

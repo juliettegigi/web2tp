@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=IBM+Plex+Mono:ital,wght@1,500&display=swap');
+
+#juego{
+    height: 850%;
+    width: 70%;
+    background-color: white;
+    margin: auto;
+}
+
+.divFondo{
+    background-image: url('../imgs/fondo.gif');
+    height: 90vh;
+}
+.divFondoAnimacion{
+    animation: mianimacion 1s ease-in-out 0s infinite normal none; 
+}
+@keyframes mianimacion { 
+    20% { 
+    z-index: 4; 
+    } 
+    35% { 
+    transform: scale(0.5); 
+    background: #FFFF00; 
+    } 
+}
+
+.preguntas{
+    background-color: azure;
+    height: 50vw;
+    width:50vw;
+}
+
+.footerCorrecto{
+    border-style: ridge;
+    border-color: chartreuse;
+    border-width: 4px;
+  
+}
+
+.footerIncorrecto{
+    border-style: ridge;
+    border-color: red;
+    border-width: 4px;
+}
+
+.card-header2{
+    transform: rotateY(360deg);
+    transform-style: preserve-3d; 
+    transition: transform 1s;
+}
+
+img{
+    height: 8rem;
+    border: 2px solid #000; /* Ancho y color del borde */
+    border-radius: 5px; 
+}
+
+#respuestaCorrecta{
+    text-align:center;
+    color:chartreuse;
+    text-shadow: rgb(0, 0, 0) 4px 4px 6px; 
+}
+
+
+.invisible{
+    visibility: hidden;
+}
+
+#contenedorJuego{
+    height: 80vh;
+    width: 50vh;
+}
+
+
+ .pregunta{
+height: 65%;
+font-family: 'IBM Plex Mono', monospace;
+font-size: 1.7rem;
+} 
+
+#pregunta{
+    height: 50%;
+
+}
+
+.card-header,.tab-pane,#juego {height: 100%;}
+
+.card,.tab-content{height: 90%;}
+#juego{width:90%}
+h1{
+    font-size: 1rem;
+}
+
+#banderaImg{
+
+}
