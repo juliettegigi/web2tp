@@ -23,7 +23,7 @@ btnLogin.addEventListener('click', e => {
     }
    
    
-    fetch('url'+"/login", {
+    fetch(url+"/login", {
         method: 'post',
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({usuario,pass}),
