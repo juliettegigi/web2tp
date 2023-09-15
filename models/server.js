@@ -34,7 +34,13 @@ export default class Server{
 
     middlewares(){
         this.app.use(cors(this.corsOptions));
-        this.app.use(express.json());
+      app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://web2tp.onrender.com');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Credentials', 'true'); // Si es necesario
+  next();
+});  this.app.use(express.json());
         this.app.use(express.static(path.join(rootDir, 'public')));
         this.app.set("view engine", "pug");
         this.app.set("views", "./views");
