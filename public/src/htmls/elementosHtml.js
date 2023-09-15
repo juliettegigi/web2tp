@@ -5,7 +5,7 @@ import { getCorrectas, getTiempo, getIncorrectas, getPregunta, getPromedio, getR
     const {pregunta,opciones}=getPregunta();
   
    return`<div class="card fixed-width-div" style="max-height: 100%;">
-    <div id="pregunta" class="pregunta card-header col-12 ">
+    <div id="pregunta" class="pregunta card-header d-flex flex-column align-items-center">
        ${pregunta.length===2? `<span  class="preguntaSpan">${pregunta.join(" ")}</span>`:
       `<p class="preguntaSpan">${pregunta[0]}</p>
       <img class="card-img-top" src=${pregunta[1]}>
