@@ -83,7 +83,7 @@ font-size: 1.7rem;
 
 }
 
-.card-header,.tab-pane,#juego {height: 100%;}
+.tab-pane,#juego {height: 100%;}
 
 .card,.tab-content{height: 90%;}
 #juego{width:90%}
