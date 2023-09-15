@@ -30,7 +30,7 @@ export default class Server{
   origin: [`http://localhost:${process.env.PORT}`, 'https://web2tp.onrender.com'],
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   optionsSuccessStatus: 204,
-};
+};}
 
     middlewares(){
         this.app.use(cors(this.corsOptions));
