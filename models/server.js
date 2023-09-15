@@ -26,7 +26,7 @@ export default class Server{
         this.routes();
         this.listen();
         /* agrego configuracion cors*/ 
-        this. corsOptions = {
+        this.corsOptions = {
             origin: [`http://localhost:${process.env.PORT}`,'*'],
             methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
             optionsSuccessStatus: 204,
