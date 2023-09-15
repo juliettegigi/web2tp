@@ -1,6 +1,4 @@
-var url = (window.location.hostname.includes('localhost'))
-    ? 'http://localhost:8080'
-    : 'https://web2tp.onrender.com';// TODO cambiar esto
+var url = 'https://web2tp.onrender.com';// TODO cambiar esto
 import { dibujarLoading,dibujarComenzarJuego, quitarHijoDivJuego } from './app.js';
 
 import { init, setRanking} from '../variables/juego.js';

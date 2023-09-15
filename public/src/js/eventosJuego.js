@@ -100,7 +100,7 @@ const eventoNext=(e)=>{
 
     }
   else{
-   
+   console.log(url);
 
       fetch(url+"/api/usuarios/ranking",{
         method : "post",
