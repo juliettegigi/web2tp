@@ -1,4 +1,6 @@
-
+var url = (window.location.hostname.includes('localhost'))
+    ? 'http://localhost:8080'
+    : 'https://web2tp.onrender.com';
 
 export const getCronometro2 = () => {
   
@@ -55,7 +57,7 @@ export const sacarIntervalo=(id)=>{return new Promise((resolved,rejected)=>{
 const obtenerPreguntas = async () => {
 
   try {
-    const res = await fetch('http://localhost:8080/api/questions/', {
+    const res = await fetch(url+'/api/questions/', {
       headers: { "Content-Type": "application/json", "token": info.token }
     })
     const res2 = await res.json();
