@@ -34,7 +34,7 @@ export default class Server{
     }
 
     middlewares(){
-        this.app.use(cors(corsOptions));
+        this.app.use(cors(this.corsOptions));
         this.app.use(express.json());
         this.app.use(express.static(path.join(rootDir, 'public')));
         this.app.set("view engine", "pug");
