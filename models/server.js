@@ -27,11 +27,10 @@ export default class Server{
         this.listen();
         /* agrego configuracion cors*/ 
         this.corsOptions = {
-            origin: [`http://localhost:${process.env.PORT}`,'*'],
-            methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-            optionsSuccessStatus: 204,
-          }; 
-    }
+  origin: [`http://localhost:${process.env.PORT}`, 'https://web2tp.onrender.com'],
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  optionsSuccessStatus: 204,
+};
 
     middlewares(){
         this.app.use(cors(this.corsOptions));
