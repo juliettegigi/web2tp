@@ -1,4 +1,3 @@
-
 import { fileURLToPath } from 'node:url';
 import { dirname } from 'node:path';
 import path from 'path'; 
@@ -15,6 +14,7 @@ const currentDir = dirname(fileURLToPath(import.meta.url));
 const rootDir = path.join(currentDir, '..');
 
 
+
 export default class Server{
     constructor(){
     
@@ -25,10 +25,16 @@ export default class Server{
         this.usuariosPath='/api/usuarios';
         this.routes();
         this.listen();
+        /* agrego configuracion cors*/ 
+        this. corsOptions = {
+            origin: [`http://localhost:${process.env.PORT}`,'*'],
+            methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+            optionsSuccessStatus: 204,
+          }; 
     }
 
     middlewares(){
-        this.app.use(cors({origin: 'https://web2tp.onrender.com'}));
+        this.app.use(cors(corsOptions));
         this.app.use(express.json());
         this.app.use(express.static(path.join(rootDir, 'public')));
         this.app.set("view engine", "pug");
