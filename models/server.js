@@ -28,7 +28,7 @@ export default class Server{
     }
 
     middlewares(){
-        this.app.use(cors());
+        this.app.use(cors({origin: 'https://web2tp.onrender.com'}));
         this.app.use(express.json());
         this.app.use(express.static(path.join(rootDir, 'public')));
         this.app.set("view engine", "pug");
