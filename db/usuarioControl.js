@@ -78,8 +78,13 @@ export class UsuarioControl {
 
   static guardarDB = async() => {
 
-    await fs.writeFile(filePath, JSON.stringify(UsuarioControl.obj), 'utf-8')
-    .catch((err => { console.log(err); }))
+  
+    try {
+      await fs.promises.writeFile(filePath, JSON.stringify(UsuarioControl.obj), 'utf-8');
+      console.log('Archivo guardado con éxito.');
+    } catch (error) {
+      console.error('Error al guardar el archivo:', error);
+    }
 
   }
 
