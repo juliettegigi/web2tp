@@ -1,5 +1,5 @@
 const html=`<div class="row justify-content-md-center py-4">
-    <div class="col-4">
+    <div  class="col-lg-4 col-md-6 col-sm-12">
         <main class="form-signin w-100 m-auto">
           <div class="d-grid">
             <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
