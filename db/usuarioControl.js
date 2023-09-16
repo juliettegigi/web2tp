@@ -45,6 +45,8 @@ export class UsuarioControl {
   static insertarUsuario = (usuarioNombre, pass) => {
     if (this.pertenece(usuarioNombre))
       return null;
+     if( !UsuarioControl.guardarDB())
+        return null
     const usuario = new Usuario(usuarioNombre, pass);
     UsuarioControl.obj.usuariosAll[usuarioNombre] = usuario;
     return usuario;
@@ -83,9 +85,9 @@ export class UsuarioControl {
       await fs.promises.writeFile(filePath, JSON.stringify(UsuarioControl.obj), 'utf-8');
       console.log('Archivo guardado con éxito.');
     } catch (error) {
-      console.error('Error al guardar el archivo:', error);
+     return false
     }
-
+    return true;
   }
 
   static async generarJWT(usuario) {

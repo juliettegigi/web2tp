@@ -16,7 +16,6 @@ export const userPost =(req, res) => {
     
     const{usuario,pass}=req.body;
     if(UsuarioControl.insertarUsuario(usuario,pass)){
-        UsuarioControl.guardarDB();
         return(res.status(200).json({ok:true,msg:"Usuario registrado"}))
     }
     else  return(res.status(400).json({msg:"Usuario ingresado ya se encuentra registrado.",usuario}))
